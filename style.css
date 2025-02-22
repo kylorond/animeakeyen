@@ -1,0 +1,210 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling with faster animated gradient background */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(270deg, #006666, #003333, #000000); /* Warna gradient lebih redup */
+    background-size: 400% 400%;
+    animation: GradientBackground 5s ease infinite;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Gradient animation */
+@keyframes GradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Header styling */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #006666; /* Warna biru tosca redup */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #006666; /* Warna biru tosca redup */
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Container styling */
+.container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Textarea styling */
+textarea {
+    width: 100%;
+    height: 100px; /* Default height for desktop */
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 2px solid #006666; /* Warna biru tosca redup */
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+    resize: none;
+}
+
+textarea::placeholder {
+    color: #ccc;
+}
+
+/* Algorithm selector styling */
+.algorithm-selector {
+    margin-bottom: 15px;
+}
+
+.algorithm-selector label {
+    font-weight: bold;
+    color: #006666; /* Warna biru tosca redup */
+}
+
+.algorithm-selector select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #006666; /* Warna biru tosca redup */
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.algorithm-selector select option {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Buttons styling */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #006666; /* Warna biru tosca redup */
+    color: #fff; /* Warna teks putih agar kontras */
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    flex: 1;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #004d4d; /* Warna biru tosca lebih gelap saat hover */
+    transform: scale(1.05);
+}
+
+/* Output textarea styling */
+#outputText {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+/* Footer styling */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    text-align: center;
+    border-top: 2px solid #006666; /* Warna biru tosca redup */
+    margin-top: auto; /* Footer tetap di bawah */
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Media Queries untuk Responsif */
+@media (max-width: 768px) {
+    /* Tablet */
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    textarea {
+        height: 150px; /* Tinggi textarea diperbesar untuk tablet */
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Handphone */
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    textarea {
+        height: 200px; /* Tinggi textarea diperbesar untuk handphone */
+        font-size: 0.9rem;
+    }
+
+    .algorithm-selector select {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enkripsi & Dekripsi by Baron</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>ENDKRIPSI & DEKRIPSI</h1>
+            <p>Solve Your own problem.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <textarea id="inputText" placeholder="Masukkan teks di sini..."></textarea>
+        
+        <div class="algorithm-selector">
+            <label for="algorithm">Pilih Algoritma:</label>
+            <select id="algorithm">
+                <option value="AES">AES (Advanced Encryption Standard)</option>
+                <option value="Base64">Base64</option>
+            </select>
+        </div>
+
+        <div class="buttons">
+            <button onclick="encrypt()">Enkripsi</button>
+            <button onclick="decrypt()">Dekripsi</button>
+        </div>
+
+        <textarea id="outputText" placeholder="Hasil akan muncul di sini..." readonly></textarea>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Enkripsi & Dekripsi by <a href="https://www.instagram.com/baronnnd_/" target="_blank" style="color: white; font-weight: bold;">Baron</a>. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
